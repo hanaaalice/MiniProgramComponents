@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "industryselect": "../../component/component-cascade/component-cascade"
+  },
+  "navigationBarTitleText": "主页面"
+}

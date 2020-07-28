@@ -1,0 +1,15 @@
+/* pages/home/home.wxss */
+.selector{
+    width: 600rpx;
+    height: 100rpx;
+    margin: 100rpx auto;
+    line-height: 100rpx;
+    color: #fff;
+    text-align: center;
+    background:linear-gradient(263deg,rgba(211,221,255,1),rgba(178,194,249,1));
+    box-shadow: 0 25rpx 20rpx -20rpx rgba(178,194,249,1);
+    border-radius:45rpx;
+}
+.no-selector{
+    background: gray;
+}

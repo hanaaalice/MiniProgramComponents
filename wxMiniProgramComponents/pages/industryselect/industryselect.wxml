@@ -1,0 +1,47 @@
+<!-- 搜索框 -->
+<view class="header-wrap">
+    <view class="search-wrap">
+        <icon type="search" class="search-icon" size="45rpx" color="#BBD1FF"></icon>
+        <input class="search-input" placeholder-class="pcolor" bindinput="searchList" value="{{searchText}}" placeholder="搜索一下"></input>
+        <icon type="cancel" class="cancel-icon"  size="40rpx" color="#BBD1FF" wx:if="{{hasInput}}" bindtap="cancelInput"></icon>
+    </view>
+</view>
+<view class="header-support"></view>
+<!-- 行业显示区域 -->
+<!-- 未搜索时显示 -->
+<view wx:if="{{isSearch}}">
+    <view class="new-type">
+        <!-- 左侧行业总分类 -->
+        <scroll-view scroll-y="{{true}}" style="height: calc( 100vh - 120rpx)" class="job-left">
+            <block wx:for="{{allJobs}}" wx:key="code">
+                <view class="job-left-title" bindtap="chooseJobTitle" style="color:{{jobTitleIndex == index ? '#5E83FC' : '#717171'}};line-height: {{item.name.length > 8 ? '50rpx' : '100rpx'}}" data-jobtitle="{{index}}">
+                <view wx:if="{{jobTitleIndex == index}}" class="left-border"></view>
+                    {{item.name}}
+                </view>
+            </block>
+        </scroll-view>
+        <!-- 右侧对应的子数据 -->
+        <scroll-view scroll-y="{{true}}" style="height: calc( 100vh - 120rpx)" class="job-right">
+        <block wx:for="{{allJobs[jobTitleIndex].children}}" wx:key="code">
+            <view class="job-right-name" bindtap="defineJob" data-choosejob="{{item.name}}" style="line-height: {{item.name.length > 14 ? '50rpx' : '100rpx'}}">
+                {{item.name}}
+            </view>
+        </block>
+        </scroll-view>
+    </view>
+</view>
+<!-- 搜索时显示 -->
+<view wx:else>
+    <view>
+        <block wx:for="{{searchJobs}}" wx:key="code">
+            <view class="searchJobs" data-choosejob="{{item.name}}" bindtap="defineJob">
+            <block wx:for="{{item.splitName}}" wx:key="code">
+                <text class="{{ item == searchText ? 'hightlight' : 'normal'}}">{{item}}</text>
+            </block>
+            <view class="belongs">
+                {{item.title}}
+            </view>
+            </view>
+        </block>
+    </view>
+</view>

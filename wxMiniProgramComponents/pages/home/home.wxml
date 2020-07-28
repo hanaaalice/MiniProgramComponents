@@ -1,0 +1,13 @@
+<!--pages/home/home.wxml-->
+<!-- 三级级联选择器 -->
+<view class="selector">
+    <industryselect></industryselect>
+</view>
+<!-- 行业选择页面 -->
+<navigator url="../industryselect/industryselect" class="selector">
+    {{chooseJob}}
+</navigator>
+<!-- 区号选择页面 -->
+<view class="selector no-selector">
+    {{chooseAreaCode}}
+</view>

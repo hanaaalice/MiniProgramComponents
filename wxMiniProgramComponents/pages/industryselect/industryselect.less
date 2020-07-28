@@ -1,0 +1,98 @@
+.header-wrap{
+    width: 750rpx;
+    height: 120rpx;
+    background-color: #5E83FC;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    .search-wrap{
+        display: flex;
+        padding: 0 30rpx;
+        margin: 30rpx auto;
+        position: relative;
+        .search-input{
+            width: 700rpx;
+            height: 60rpx;
+            font-size: 30rpx;
+            line-height: 60rpx;
+            background-color: rgba(255, 255, 255, .2);
+            padding-left: 100rpx;
+            color: #fff;
+            border-radius: 8rpx;
+        }
+        .search-icon{
+            position: absolute;
+            left: 60rpx;
+            top: 7.5rpx;
+        }
+        .cancel-icon{
+            position: absolute;
+            right: 60rpx;
+            top: 10rpx;
+            z-index: 99;
+        }
+        .pcolor{
+            color: #BBD1FF;
+        }
+    }
+}
+.header-support{
+    width: 750rpx;
+    height: 120rpx;
+}
+.new-type{
+    display: flex;
+    .job-left{
+        width: 300rpx;
+        .job-left-title:nth-child(1){
+            margin-top: 40rpx;
+        }
+        .job-left-title{
+            width: 240rpx;
+            height: 100rpx;
+            margin-bottom: 60rpx;
+            margin-left: 30rpx;
+            font-size: 30rpx;
+            position: relative;
+            .left-border{
+                position: absolute;
+                left: -30rpx;
+                border-right: 8rpx solid #5E83FC;
+                border-radius: 2rpx;
+                height: 50rpx;
+                top: 25rpx;
+            }
+        }
+    }
+    .job-right{
+        width: calc( 750rpx - 270rpx);
+        background-color: #F5F7FE;
+        .job-right-name:nth-child(1){
+            margin-top: 40rpx;
+        }
+        .job-right-name{
+            width: 420rpx;
+            height: 100rpx;
+            margin-bottom: 60rpx;
+            margin-left: 30rpx;
+            font-size: 30rpx;
+            color: #717171;
+        }
+    }
+}
+.searchJobs{
+    width: 690rpx;
+    height: 130rpx;
+    border-bottom: 2rpx solid #F5F7FE;
+    padding-top: 32rpx;
+    margin: 0 auto;
+    font-size: 35rpx;
+    .hightlight{
+        color: #5E83FC;
+    }
+    .belongs{
+        margin-top: 10rpx;
+        font-size: 25rpx;
+        color: #AFAFAF;
+    }
+}
