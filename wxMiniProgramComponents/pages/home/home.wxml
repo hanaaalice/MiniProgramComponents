@@ -8,6 +8,6 @@
     {{chooseJob}}
 </navigator>
 <!-- 区号选择页面 -->
-<view class="selector no-selector">
-    {{chooseAreaCode}}
-</view>
+<navigator url="../areacode/areacode" class="selector">
+    {{regionNumber}}
+</navigator>

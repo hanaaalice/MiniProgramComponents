@@ -1,1 +1,71 @@
-/* pages/areacode/areacode.wxss */
+.header-wrap {
+  width: 750rpx;
+  height: 120rpx;
+  background-color: #5E83FC;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+.header-wrap .search-wrap {
+  display: flex;
+  padding: 0 30rpx;
+  margin: 30rpx auto;
+  position: relative;
+  /* icon在上层被点击 */
+}
+.header-wrap .search-wrap .search-input {
+  width: 700rpx;
+  height: 60rpx;
+  font-size: 30rpx;
+  line-height: 60rpx;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding-left: 100rpx;
+  color: #fff;
+  border-radius: 8rpx;
+}
+.header-wrap .search-wrap .search-icon {
+  position: absolute;
+  left: 60rpx;
+  top: 7.5rpx;
+}
+.header-wrap .search-wrap .cancel-icon {
+  position: absolute;
+  right: 60rpx;
+  top: 10rpx;
+  z-index: 99;
+}
+.header-wrap .search-wrap .pcolor {
+  color: #BBD1FF;
+}
+.showRegion {
+  margin-top: 120rpx;
+}
+.regionContainer {
+  display: flex;
+  height: 90rpx;
+  font-size: 28rpx;
+  line-height: 90rpx;
+  position: relative;
+  color: #535353;
+  border-bottom: 2rpx solid #F7F8FB;
+  padding-left: 30rpx;
+}
+.regionContainer .regionNum {
+  position: absolute;
+  color: #ADAEB0;
+  right: 30rpx;
+}
+.regionContainer-header {
+  background-color: #F5F7FE;
+  width: 750rpx;
+  height: 50rpx;
+  padding-left: 30rpx;
+  line-height: 50rpx;
+  font-size: 24rpx;
+  color: #5E83FC;
+}
+.fixed-header {
+  position: fixed;
+  top: 120rpx;
+  z-index: 99;
+}

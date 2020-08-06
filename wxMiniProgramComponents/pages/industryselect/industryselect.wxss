@@ -11,6 +11,7 @@
   padding: 0 30rpx;
   margin: 30rpx auto;
   position: relative;
+  /* icon在上层被点击 */
 }
 .header-wrap .search-wrap .search-input {
   width: 700rpx;

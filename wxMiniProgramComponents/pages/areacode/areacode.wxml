@@ -1,2 +1,22 @@
-<!--pages/areacode/areacode.wxml-->
-<text>pages/areacode/areacode.wxml</text>
+<!-- 搜索框 -->
+<view class="header-wrap">
+    <view class="search-wrap">
+        <icon type="search" class="search-icon" size="45rpx" color="#BBD1FF"></icon>
+        <input class="search-input" placeholder-class="pcolor" bindinput="startSearch" value="{{searchText}}" placeholder="搜索一下"></input>
+        <icon type="cancel" class="cancel-icon"  size="40rpx" color="#BBD1FF" wx:if="{{searchText.length != 0}}" bindtap="cancelInput"></icon>
+    </view>
+</view>
+<!-- 顶部固定区域 -->
+<view wx:if="{{searchText.length == 0}}" class="fixed-header regionContainer-header">
+  {{currentHeader}}
+</view>
+<!-- 区号显示区域 -->
+<view class="showRegion">
+  <!-- 遍历数据 -->
+  <block wx:for="{{regionsNum}}" wx:key="index" >
+    <view class="{{ item.country_code ? 'regionContainer' : 'regionContainer-header'}}" data-code="{{item.phone_code}}" bindtap="backValidate">
+      <view class="cnName">{{item.chinese_name}}</view>
+      <view class="regionNum">{{item.phone_code}}</view>
+    </view>
+  </block>
+</view>

@@ -32,8 +32,12 @@ App({
         }
       }
     })
+    // 获取dpr
+    let systemInfo = wx.getSystemInfoSync()
+    this.globalData.px2rpx = 750 / systemInfo.windowWidth
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    px2rpx: 0,
   }
 })

@@ -7,7 +7,7 @@ Page({
   data: {
     selector: '国内外、省、市三级级联选择器',
     chooseJob: '行业选择',
-    chooseAreaCode: '选择区号'
+    regionNumber: '选择区号'
   },
 
   /**
